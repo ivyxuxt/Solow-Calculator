@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solow Model Calculator</title>
+</head>
+<body>
+    <h1>Solow Model Calculator</h1>
+    <form action="/" method="POST">
+        <label for="avg_s">Average Savings Rate (0-1):</label><br>
+        <input type="number" id="avg_s" name="avg_s" step="0.01" required><br>
+        
+        <label for="avg_pop_gr">Average Population Growth Rate (0-1):</label><br>
+        <input type="number" id="avg_pop_gr" name="avg_pop_gr" step="0.01" required><br>
+        
+        <label for="pro_gr">Productivity Growth Rate (0-1):</label><br>
+        <input type="number" id="pro_gr" name="pro_gr" step="0.01" required><br>
+        
+        <label for="depreciation_rate">Depreciation Rate (0-1):</label><br>
+        <input type="number" id="depreciation_rate" name="depreciation_rate" step="0.01" required><br>
+        
+        <label for="k_share">Capital Share of Income (0-1):</label><br>
+        <input type="number" id="k_share" name="k_share" step="0.01" required><br><br>
+        
+        <button type="submit">Calculate</button>
+    </form>
+
+    <!-- Results Section -->
+    <h2>Results</h2>
+    <p><strong>Steady-State Capital per Effective Labor (k̂):</strong> {{ k_hat }}</p>
+    <p><strong>Steady-State Output per Effective Labor (ŷ):</strong> {{ y_hat }}</p>
+</body>
+</html>
